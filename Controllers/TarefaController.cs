@@ -27,12 +27,9 @@ namespace TrilhaApiDesafio.Controllers
 
         [HttpGet]
         public IActionResult ObterTodos()
-        {
-            // Buscar todas as tarefas no banco utilizando o EF
+        {  
             var tarefas = _context.Tarefas.ToList();
-            
-        // Retornar a lista de tarefas com o status HTTP 200
-        return Ok(tarefas);
+            return Ok(tarefas);
         }
 
         [HttpGet("ObterPorTitulo")]
